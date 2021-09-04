@@ -1,0 +1,94 @@
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: white;
+  background: linear-gradient(to left, #402B0C, #959B58);
+  height: 100%;
+  width: 100%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header {
+  display: inline-block;
+  border: 5px solid rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, .75);
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  margin-top: -116px;
+  z-index: 1;
+}
+
+button {
+  cursor: pointer;
+  color: rgba(255, 255, 255, .65);
+  border: 2px solid rgba(255, 255, 255, .25);
+  transition: all .07s ease;
+  outline: none;
+  margin: 2px;
+  background-color: rgba(1, 1, 1, .40);
+}
+
+input {
+  background-color: rgba(255, 255, 255, .50);
+  margin: 2px;
+}
+
+#searchBar {
+  position: fixed;
+  z-index: 2;
+  margin: -85px 0 10px 0;
+}
+
+#gamemode input{
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 5px;
+}
+
+#myImgs {
+  max-height: 93%;
+  max-width: 93%;
+  margin: 6% 3%;
+}
+
+img {
+  max-width: 10%;
+  max-height: 10%;
+  transition: all .15s ease;
+}
+
+img:hover {
+  transform: scale(1.8);
+}
+
+button:hover {
+  color: rgba(255, 255, 255, 1);
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
