@@ -19,7 +19,7 @@
 
 		<div id="searchBar">
 			<input type="text" name="" value="Dragon">
-			<button type="button" name="button">Search</button>
+			<button type="button" name="search" data-search>Search</button>
 		  <input type="radio" id="cardName" name="searchParam" checked>
 		  <label for="cardName">Name</label>
 			<input type="radio" id="cardTribe" name="searchParam" unchecked>
@@ -32,7 +32,16 @@
 			</div>
 		</div>
 
+		<div id="deckBar">
+			<div id="myDeck"></div>
+			<button type="button" name="clearDeck" data-clear>Clear</button>
+		</div>
+		<button type="button" name="hideDeck" id="hideMe" data-hide>Hide/Show</button>
+
 		<div id="myImgs"></div>
+
+
+
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

@@ -1,4 +1,7 @@
-document.querySelector('button').addEventListener('click',getHS);
+document.querySelector('[data-search]').addEventListener('click',getHS);
+document.querySelector('[data-clear]').addEventListener('click',clearDeck);
+document.querySelector('[data-hide]').addEventListener ('click',hideBar);
+document.querySelector('#myImgs').addEventListener('click', elem => {saveCard(elem.srcElement.currentSrc)});
 
 function isChecked(str){
   return document.getElementById(str).checked == true;
@@ -35,4 +38,24 @@ function getHS(){
           .catch(err => {
 	           console.error(err);
            });
+}
+
+function saveCard(card){
+  if(card !== undefined){
+    document.querySelector('#myDeck').innerHTML += ('<img src='+card+'>');
+  }
+}
+
+function clearDeck(){
+  document.querySelector('#myDeck').innerHTML = '';
+}
+
+function hideBar(){
+  if(document.querySelector('#deckBar').style.display !== "none"){
+    document.querySelector('#deckBar').style.display = "none";
+    document.querySelector('header').style.display = "none";
+  }else{
+    document.querySelector('#deckBar').style.display = "block";
+    document.querySelector('header').style.display = "block";
+  }
 }

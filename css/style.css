@@ -24,8 +24,6 @@
 body {
   color: white;
   background: linear-gradient(to left, #402B0C, #959B58);
-  height: 100%;
-  width: 100%;
 }
 
 /******************************************
@@ -76,10 +74,23 @@ input {
   margin: 6% 3%;
 }
 
+#deckBar {
+  border: 5px solid rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, .75);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#myDeck {
+  margin: 0 50px;
+}
+
 img {
   max-width: 10%;
   max-height: 10%;
-  transition: all .15s ease;
+  transition: all .25s ease;
 }
 
 img:hover {
@@ -88,6 +99,23 @@ img:hover {
 
 button:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+#myDeck > img {
+  max-width: 5%;
+  max-height: 5%;
+  margin: 0 5px;
+}
+
+#myDeck > img:hover {
+  transform: scale(2.8) translateY(-30%);
+}
+
+#hideMe {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
 }
 /******************************************
 /* ADDITIONAL STYLES
